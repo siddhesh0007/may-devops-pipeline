@@ -6,7 +6,7 @@ pipeline
     
     stage ('git clone')
     { steps
-          {  sh 'ehco downloading code' }
+          {  sh 'echo downloading code' }
      }
     
     stage ('code compile')
