@@ -19,7 +19,7 @@ pipeline
     
     
     stage ('deployment')
-    { stesps
+    { steps
      { sh 'echo code is deploying' }
     }
   }
