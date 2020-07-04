@@ -9,9 +9,18 @@ pipeline
           {  sh 'echo downloading code' }
      }
     
-    stage ('code compile')
+    stage ('code build')
     { steps
-     {   sh 'echo code is compiling'    }
+     {   sh 'echo code is building'    }
+    }
+     
+    stage ('get apprvoal')
+    { input "please approve the deployment?" }
+    
+    
+    stage ('deployment')
+    { stesps
+     { sh 'echo code is deploying' }
     }
   }
 }
