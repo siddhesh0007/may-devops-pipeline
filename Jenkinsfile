@@ -13,13 +13,6 @@ pipeline
     { steps
      {   sh 'echo code is building'    }
     }
-     
-    stage ('get apprvoal')
-    { steps 
-    { input "please approve the deployment?" }
-    }
-    
-    
     
     stage ('deployment')
     { steps
