@@ -21,7 +21,7 @@ pipeline
     
     
     
-    stage ('deployment')
+    stage ('deployments')
     { steps
      { sh 'echo code is deploying' }
     }
