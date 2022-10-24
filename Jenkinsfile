@@ -3,7 +3,7 @@ pipeline
   agent any
   stages
   {
-         Steps('scm checkout')
+         stage('scm checkout')
        {
          Steps
          {
