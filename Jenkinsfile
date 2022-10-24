@@ -3,10 +3,9 @@ pipeline
   agent any
    stages
     {
-         stage ('scm checkout')
+         stage('scm checkout')
        {
-          Steps
-          {
+         Step{
            git branch: 'master', url: 'https://github.com/siddhesh0007/may-devops-pipeline.git'
           }
 
