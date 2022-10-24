@@ -7,7 +7,7 @@ pipeline
        {
           Steps
           {
-           git 'https://github.com/siddhesh0007/may-devops-pipeline.git'
+           git 'git branch: 'master', url: 'https://github.com/siddhesh0007/may-devops-pipeline.git'
           }
 
          }
