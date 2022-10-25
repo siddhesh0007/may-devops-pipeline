@@ -12,7 +12,7 @@ pipeline
 
        stage('please compile code')
        { steps {
-           withMaven(jdk: 'locakjdk-1.8', maven: 'localmaven') {
+           withMaven(jdk: 'locakjdk-1.7', maven: 'localmaven') {
             sh 'mvn compile'
 }
        }
@@ -21,7 +21,7 @@ pipeline
       
            stage('please test code')
        { steps {
-           withMaven(jdk: 'locakjdk-1.8', maven: 'localmaven') {
+           withMaven(jdk: 'locakjdk-1.7', maven: 'localmaven') {
             sh 'mvn test'
 }
        }
@@ -29,21 +29,13 @@ pipeline
        }
         stage('please build code')
        { steps {
-           withMaven(jdk: 'locakjdk-1.8', maven: 'localmaven') {
+           withMaven(jdk: 'locakjdk-1.7', maven: 'localmaven') {
             sh 'mvn package'
 }
        }
 
        }
       
-      stage('deploy to tomcat')
-       {
-         steps
-          {
-            sshagent(['3d7efb47-ebdb-41fc-ba84-64adcad73b85']) {
-            sh 'scp -o StrictHostKeyChecking=no */target/webapp.war ec2-user@172.31.9.195:/var/lib/tomcat/webapps'
-}
-}
-}
+  
    } 
 }
